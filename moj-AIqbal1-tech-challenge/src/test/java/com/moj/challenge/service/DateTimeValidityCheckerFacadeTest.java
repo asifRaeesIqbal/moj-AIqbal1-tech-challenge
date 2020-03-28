@@ -43,6 +43,7 @@ public class DateTimeValidityCheckerFacadeTest {
 		Mockito.when(openingHourChecker.isDateTimeValid(localDateTime)).thenReturn(true);
 		Mockito.when(twoHourChecker.isDateTimeValid(localDateTime)).thenReturn(true);
 
+
 		boolean isValid = checkerFacade.isDateTimeValid(localDateTime);
 		
 		assertTrue(isValid);
