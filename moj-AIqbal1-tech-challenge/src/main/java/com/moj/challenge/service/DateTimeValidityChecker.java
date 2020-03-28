@@ -1,6 +1,5 @@
 package com.moj.challenge.service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -9,6 +8,7 @@ import java.time.LocalDateTime;
  * @author AI
  *
  */
+@FunctionalInterface
 public interface DateTimeValidityChecker {
 
 	/**

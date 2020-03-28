@@ -22,7 +22,7 @@ public class CheckDateController {
 	    @ApiResponse(code = 200, message = "Successfully checked the date."),
 	    @ApiResponse(code = 401, message = "You are not authorized to get this information."),
 	})
-	@GetMapping("/call-center/availability/date/check")
+	@GetMapping("/callcenter/availability/date/check")
     public boolean getStatus(@RequestParam("dateTime")
     								@DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME) 
     								LocalDateTime dateTime) throws Exception{
