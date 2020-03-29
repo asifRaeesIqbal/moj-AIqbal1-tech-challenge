@@ -21,9 +21,13 @@ public class Future2HourDateTimeValidityChecker implements DateTimeValidityCheck
 
 	@Override
 	public boolean isDateTimeValid(LocalDateTime localDateTime) {
+		if(localDateTime.isBefore(getDateTime())) { // past
+			return false;
+		}
+		
 		LocalDateTime dateTime = getDateTime();
 		dateTime = dateTime.plusHours(2);		
-		if(localDateTime.isAfter(getDateTime()) && (localDateTime.isBefore(dateTime) || localDateTime.equals(dateTime))) {
+		if(localDateTime.isAfter(dateTime) || localDateTime.equals(dateTime)) {
 			return true;
 		}
 		return false;
